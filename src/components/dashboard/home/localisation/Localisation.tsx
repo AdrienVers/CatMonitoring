@@ -24,7 +24,7 @@ function Localisation() {
 			</div>
 			{isHovered && (
 				<div className={styles.cursor} ref={cursorRef}>
-					Suzy est dans le salon
+					Suzy est dans la chambre
 				</div>
 			)}
 		</div>

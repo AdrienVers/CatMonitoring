@@ -25,6 +25,10 @@
 
 			.graph {
 				width: 60%;
+
+				@media (max-width: 450px) {
+					width: 80%;
+				}
 			}
 		}
 	}

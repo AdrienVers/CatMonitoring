@@ -45,9 +45,9 @@ const Weight = () => {
 		const initialData = [4.4, 4.7, 4.3, 4.8, 4.0, 3.8];
 		const colors = initialData.map((weight) => {
 			if (weight > 4.5 || weight < 3.5) {
-				return "rgba(255, 0, 0, 0.8)"; // Red
+				return "rgba(255, 0, 0, 0.8)";
 			} else {
-				return "rgba(12, 200, 128, 0.8)"; // Green
+				return "rgba(12, 200, 128, 0.8)";
 			}
 		});
 
