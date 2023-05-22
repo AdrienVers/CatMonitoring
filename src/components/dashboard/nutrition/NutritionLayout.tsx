@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./NutritionLayout.module.scss";
+import styles from "./nutritionLayout.module.scss";
 import Thirst from "./graphs/Thirst";
 import Weight from "./graphs/Weight";
 import PawStep from "./graphs/PawStep";

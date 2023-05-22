@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./HomeLayout.module.scss";
+import styles from "./homeLayout.module.scss";
 import Overview from "./overview/Overview";
 import Localisation from "./localisation/Localisation";
 import Appointment from "./appointment/Appointment";

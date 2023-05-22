@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./IntellectLayout.module.scss";
+import styles from "./intellectLayout.module.scss";
 import Psychology from "./graphs/Psychology";
 import TimeActivity from "./graphs/TimeActivity";
 import Purring from "./graphs/Purring";
