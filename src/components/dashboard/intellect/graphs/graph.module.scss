@@ -1,0 +1,31 @@
+.container {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (max-width: 1110px) {
+		width: 100%;
+	}
+
+	.graphContainer {
+		width: 90%;
+		background: white;
+
+		@media (max-width: 1110px) {
+			width: 95%;
+		}
+
+		.description {
+			padding: 30px 0 40px 0;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.graph {
+				width: 60%;
+			}
+		}
+	}
+}

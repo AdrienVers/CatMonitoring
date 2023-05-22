@@ -1,0 +1,14 @@
+.container {
+	background-color: rgb(230, 230, 230);
+
+	.layout {
+		position: absolute;
+		width: calc(100% - 150px);
+		right: 0;
+		top: 50px;
+
+		@media (max-width: 600px) {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+.container {
+	position: fixed;
+	background: rgb(35, 45, 70);
+	color: white;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	z-index: 200;
+	top: 0;
+
+	.logoContainer {
+		display: flex;
+		align-items: center;
+
+		.logo {
+			padding-left: 20px;
+		}
+
+		.title {
+			padding-left: 15px;
+
+			@media (max-width: 400px) {
+				display: none;
+			}
+		}
+
+		.description {
+			padding-left: 5px;
+
+			@media (max-width: 550px) {
+				display: none;
+			}
+		}
+	}
+
+	.userContainer {
+		display: flex;
+		align-items: center;
+		padding: 0px 20px;
+
+		.userImage {
+			border-radius: 35px;
+		}
+
+		span {
+			padding: 0 20px;
+			cursor: default;
+		}
+	}
+}

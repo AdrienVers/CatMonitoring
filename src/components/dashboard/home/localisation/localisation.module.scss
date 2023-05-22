@@ -1,0 +1,56 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.modale {
+		background: white;
+		width: 95%;
+
+		@media (max-width: 1110px) {
+			width: 95%;
+		}
+
+		.description {
+			padding: 40px 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			.plan {
+				width: 65%;
+				height: auto;
+			}
+
+			span {
+				position: absolute;
+				top: 22%;
+				left: 65%;
+				font-size: 1.8vw;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.cursor {
+		position: fixed;
+		top: -25px;
+		left: 10px;
+		padding: 4px 8px;
+		background-color: black;
+		color: white;
+		border-radius: 5px;
+		z-index: 100;
+		display: none;
+	}
+
+	&:hover {
+		.cursor {
+			display: block;
+		}
+	}
+}

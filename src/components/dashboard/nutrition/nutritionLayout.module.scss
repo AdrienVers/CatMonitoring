@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+
+	.descriptions,
+	.graphs {
+		background: rgb(230, 230, 230);
+		display: flex;
+
+		@media (max-width: 1110px) {
+			flex-direction: column;
+		}
+	}
+}
