@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Separation.module.scss";
+import styles from "./separation.module.scss";
 
 function Separation() {
 	return <div className={styles.container} />;
