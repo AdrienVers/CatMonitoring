@@ -43,6 +43,11 @@ const Thirst = () => {
 
 	const [chartOptions, setChartOptions] = useState({});
 
+	const today = new Date();
+	const currentDate = `${String(today.getDate()).padStart(2, "0")}/${String(
+		today.getMonth() + 1,
+	).padStart(2, "0")}/${today.getFullYear()}`;
+
 	useEffect(() => {
 		setChartData({
 			labels: [
@@ -103,7 +108,7 @@ const Thirst = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.graphContainer}>
-				<TitleModale title="Alimentation et hydratation du 20/05/2023" />
+				<TitleModale title={`Alimentation et hydratation du ${currentDate}`} />
 				<div className={styles.description}>
 					<div className={styles.graph}>
 						<Line data={chartData} options={chartOptions} />
