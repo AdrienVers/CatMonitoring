@@ -115,6 +115,14 @@ function Calendar() {
 							locale="fr"
 							datesSet={handleDatesSet}
 							headerToolbar={false}
+							events={[
+								{ title: "Anti-Puce", date: "2023-05-01" },
+								{ title: "Vermifuge", date: "2023-05-17" },
+								{ title: "Vétérinaire", date: "2023-06-08" },
+								{ title: "Ostéopathe", date: "2023-07-17" },
+								{ title: "Anti-Puce", date: "2023-08-01" },
+								{ title: "Vermifuge", date: "2023-10-10" },
+							]}
 						/>
 					</div>
 				</div>

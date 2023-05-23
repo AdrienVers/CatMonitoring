@@ -22,22 +22,20 @@ function Sidebar() {
 				{SIDEBAR_DATA.map((item, index) => {
 					if (item.path === "/agenda") {
 						return (
-							<Link key={index} href="/agenda" legacyBehavior>
-								<div
-									className={`${styles.linkContainer} ${
-										router.pathname === item.path ? styles.active : ""
-									}`}
-									key={index}
-								>
-									<div className={styles.link}>
-										<a onClick={handleNavigation}>
-											<i className={item.icon} />
-											<span>{item.title}</span>
-										</a>
-									</div>
-									<div className={styles.linkIndicator} />
+							<div
+								className={`${styles.linkContainer} ${
+									router.pathname === item.path ? styles.active : ""
+								}`}
+								key={index}
+							>
+								<div className={styles.link}>
+									<a onClick={handleNavigation}>
+										<i className={item.icon} />
+										<span>{item.title}</span>
+									</a>
 								</div>
-							</Link>
+								<div className={styles.linkIndicator} />
+							</div>
 						);
 					} else {
 						return (
