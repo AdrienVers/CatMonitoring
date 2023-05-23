@@ -11,8 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Navbar />
 			<Sidebar />
 			<div className={styles.layout}>
-				{/* <Component {...pageProps} /> */}
-				<Calendar />
+				<Component {...pageProps} />
 			</div>
 		</div>
 	);
