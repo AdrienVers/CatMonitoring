@@ -15,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Sidebar />
 			<div className={styles.layout}>
 				{router.pathname === "/agenda" ? (
-					<AgendaLayout />
+					<div style={{ display: "flex", justifyContent: "center" }}>
+						<AgendaLayout />
+					</div>
 				) : (
 					<Component {...pageProps} />
 				)}

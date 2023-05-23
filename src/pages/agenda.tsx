@@ -1,7 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import AgendaLayout from "../components/dashboard/agenda/AgendaLayout";
-import Calendar from "../components/dashboard/agenda/calendar/Calendar";
 
 function Agenda() {
 	return (
@@ -12,7 +10,7 @@ function Agenda() {
 				<link rel="icon" href="/icon.png" />
 			</Head>
 			{/* <AgendaLayout /> */}
-			Travaux en cours
+			{/* Travaux en cours */}
 		</div>
 	);
 }
