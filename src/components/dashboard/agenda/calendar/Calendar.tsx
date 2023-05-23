@@ -122,10 +122,11 @@ function Calendar() {
 								{ title: "Ostéopathe", date: "2023-07-17" },
 								{ title: "Anti-Puce", date: "2023-08-01" },
 								{ title: "Vermifuge", date: "2023-10-10" },
-							]}
+							].map((event) => ({ ...event, color: "rgb(35, 45, 70)" }))}
 							dayCellClassNames={(cell) => {
 								const date = cell.date;
 								const today = new Date();
+
 								if (
 									date.getDate() === today.getDate() &&
 									date.getMonth() === today.getMonth() &&
@@ -133,7 +134,7 @@ function Calendar() {
 								) {
 									return [styles.today];
 								}
-								return [];
+								return [styles.days];
 							}}
 						/>
 					</div>
