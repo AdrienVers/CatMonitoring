@@ -116,6 +116,10 @@ function Calendar() {
 							datesSet={handleDatesSet}
 							headerToolbar={false}
 							events={[
+								{ title: "Vétérinaire", date: "2022-11-22" },
+								{ title: "Vermifuge", date: "2022-12-02" },
+								{ title: "Anti-Puce", date: "2023-01-02" },
+								{ title: "Ostéopathe", date: "2023-04-03" },
 								{ title: "Anti-Puce", date: "2023-05-01" },
 								{ title: "Vermifuge", date: "2023-05-17" },
 								{ title: "Vétérinaire", date: "2023-06-08" },
