@@ -122,7 +122,8 @@ function Calendar() {
 								{ title: "Ostéopathe", date: "2023-07-17" },
 								{ title: "Anti-Puce", date: "2023-08-01" },
 								{ title: "Vermifuge", date: "2023-10-10" },
-							].map((event) => ({ ...event, color: "rgb(35, 45, 70)" }))}
+							]}
+							eventClassNames={styles.eventColor}
 							dayCellClassNames={(cell) => {
 								const date = cell.date;
 								const today = new Date();
@@ -135,6 +136,25 @@ function Calendar() {
 									return [styles.today];
 								}
 								return [styles.days];
+							}}
+							dayCellContent={(content) => {
+								const date = content.date;
+								const today = new Date();
+
+								if (
+									date.getDate() === today.getDate() &&
+									date.getMonth() === today.getMonth() &&
+									date.getFullYear() === today.getFullYear()
+								) {
+									return (
+										<div className={styles.today}>{content.dayNumberText}</div>
+									);
+								}
+								return (
+									<div className={styles.dateNumber}>
+										{content.dayNumberText}
+									</div>
+								);
 							}}
 						/>
 					</div>

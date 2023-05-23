@@ -122,9 +122,22 @@
 			}
 
 			.days {
-				width: 10%;
-				height: 10%;
-				box-shadow: 0 0 0 0.3px rgb(240, 240, 240);
+				box-shadow: 0 0 0 0.8px rgb(240, 240, 240);
+			}
+
+			.dateNumber {
+				background: red;
+			}
+
+			.eventColor {
+				background-color: rgb(35, 45, 70);
+				color: white;
+				border: none;
+				padding: 5px;
+
+				@media (max-width: 400px) {
+					padding: 1px;
+				}
 			}
 		}
 	}
