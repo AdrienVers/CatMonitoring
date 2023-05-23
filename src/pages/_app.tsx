@@ -7,15 +7,13 @@ import Calendar from "../components/dashboard/agenda/calendar/Calendar";
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<Calendar />
-		/*
 		<div className={styles.container}>
 			<Navbar />
-			<Sidebar />
+			{/* <Sidebar /> */}
 			<div className={styles.layout}>
-				<Component {...pageProps} />
+				{/* <Component {...pageProps} /> */}
+				<Calendar />
 			</div>
 		</div>
-		*/
 	);
 }
