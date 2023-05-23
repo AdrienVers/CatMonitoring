@@ -1,17 +1,24 @@
+import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import Navbar from "../components/navbar/Navbar";
 import Sidebar from "../components/sidebar/Sidebar";
 import "../styles/globals.scss";
 import styles from "../styles/app.module.scss";
-import Calendar from "../components/dashboard/agenda/calendar/Calendar";
+import AgendaLayout from "../components/dashboard/agenda/AgendaLayout";
 
 export default function App({ Component, pageProps }: AppProps) {
+	const router = useRouter();
+
 	return (
 		<div className={styles.container}>
 			<Navbar />
 			<Sidebar />
 			<div className={styles.layout}>
-				<Component {...pageProps} />
+				{router.pathname === "/agenda" ? (
+					<AgendaLayout />
+				) : (
+					<Component {...pageProps} />
+				)}
 			</div>
 		</div>
 	);
