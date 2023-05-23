@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<div className={styles.container}>
 			<Navbar />
-			{/* <Sidebar /> */}
+			<Sidebar />
 			<div className={styles.layout}>
 				{/* <Component {...pageProps} /> */}
 				<Calendar />
