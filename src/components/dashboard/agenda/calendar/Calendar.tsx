@@ -1,101 +1,3 @@
-import React, { useState, useRef } from "react";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin from "@fullcalendar/interaction";
-import frLocale from "@fullcalendar/core/locales/fr";
-
-function Calendar() {
-	let myLocale = {
-		...frLocale,
-		buttonText: {
-			...frLocale.buttonText,
-			today: "Aujourd'hui",
-		},
-	};
-
-	const [month, setMonth] = useState(0);
-	const [year, setYear] = useState(0);
-	const calendarRef = useRef<FullCalendar | null>(null);
-
-	const handleDatesSet = (arg: any) => {
-		if (calendarRef.current) {
-			const calendarApi = calendarRef.current.getApi();
-			const date = calendarApi.getDate();
-
-			setMonth(date.getMonth() + 1);
-			setYear(date.getFullYear());
-		}
-	};
-
-	const monthNames = [
-		"Janvier",
-		"Février",
-		"Mars",
-		"Avril",
-		"Mai",
-		"Juin",
-		"Juillet",
-		"Août",
-		"Septembre",
-		"Octobre",
-		"Novembre",
-		"Décembre",
-	];
-
-	const capitalizeFirstLetter = (string: string) => {
-		return string.charAt(0).toUpperCase() + string.slice(1);
-	};
-
-	const monthName = month ? capitalizeFirstLetter(monthNames[month - 1]) : "";
-
-	const handleNext = () => {
-		if (calendarRef.current) {
-			const calendarApi = calendarRef.current.getApi();
-			calendarApi.next();
-		}
-	};
-
-	const handlePrev = () => {
-		if (calendarRef.current) {
-			const calendarApi = calendarRef.current.getApi();
-			calendarApi.prev();
-		}
-	};
-
-	const handleToday = () => {
-		if (calendarRef.current) {
-			const calendarApi = calendarRef.current.getApi();
-			calendarApi.today();
-		}
-	};
-
-	return (
-		<div>
-			<FullCalendar
-				ref={(calendar) => {
-					calendarRef.current = calendar;
-				}}
-				plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-				initialView={"dayGridMonth"}
-				locales={[myLocale]}
-				locale="fr"
-				datesSet={handleDatesSet}
-				headerToolbar={false}
-			/>
-			<p>{`Le Mois : ${month}`}</p>
-			<p>{`Le Mois en lettre : ${monthName}`}</p>
-			<p>{`L'année : ${year}`}</p>
-			<button onClick={handlePrev}>left</button>
-			<button onClick={handleNext}>right</button>
-			<button onClick={handleToday}>today</button>
-		</div>
-	);
-}
-
-export default Calendar;
-
-/*
 import React, { useState, useRef, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -221,6 +123,18 @@ function Calendar() {
 								{ title: "Anti-Puce", date: "2023-08-01" },
 								{ title: "Vermifuge", date: "2023-10-10" },
 							]}
+							dayCellClassNames={(cell) => {
+								const date = cell.date;
+								const today = new Date();
+								if (
+									date.getDate() === today.getDate() &&
+									date.getMonth() === today.getMonth() &&
+									date.getFullYear() === today.getFullYear()
+								) {
+									return [styles.today];
+								}
+								return [];
+							}}
 						/>
 					</div>
 				</div>
@@ -230,4 +144,3 @@ function Calendar() {
 }
 
 export default Calendar;
-*/
