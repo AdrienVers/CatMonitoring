@@ -16,8 +16,9 @@ function Calendar() {
 		},
 	};
 
-	const [month, setMonth] = useState(0);
-	const [year, setYear] = useState(0);
+	const current_date = new Date();
+	const [month, setMonth] = useState(current_date.getMonth() + 1);
+	const [year, setYear] = useState(current_date.getFullYear());
 	const calendarRef = useRef<FullCalendar | null>(null);
 
 	const monthNames = [
